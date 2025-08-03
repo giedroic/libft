@@ -1,3 +1,5 @@
+#include "../include/ft_isalpha.h"
+
 static int	ft_islower(int c);
 static int	ft_isupper(int c);
 
