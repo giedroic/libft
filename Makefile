@@ -8,5 +8,8 @@ INCLUDE = $(addprefix include/,$(FT))
 INCLUDE := $(addsuffix .h,$(INCLUDE))
 OBJECT = $(addsuffix .o,$(FT))
 
+libft.a : $(OBJECT)
+	ar cr libft.a $(OBJECT)
+
 $(OBJECT) : $(INCLUDE) include/libft.h
 	$(CC) $(LIBC)
