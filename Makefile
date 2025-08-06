@@ -7,13 +7,15 @@ LIBC :=$(addsuffix .c,$(LIBC))
 INCLUDE = $(addprefix include/,$(FT))
 INCLUDE := $(addsuffix .h,$(INCLUDE))
 OBJECT = $(addsuffix .o,$(FT))
-.PHONY: clean
+NAME = libft.a
 
-libft.a : $(OBJECT)
-	ar cr libft.a $(OBJECT)
+.PHONY : clean
+
+$(NAME) : $(OBJECT)
+	ar cr $(NAME) $(OBJECT)
 
 $(OBJECT) : $(INCLUDE) include/libft.h
 	$(CC) $(LIBC)
 
 clean :
-	rm libft.a $(OBJECT)
+	rm $(NAME) $(OBJECT)
