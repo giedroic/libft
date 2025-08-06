@@ -8,7 +8,11 @@ int	main(int argc, char *argv[])
 
 	c = argv[1][0];
 	argc = (int) argc;
-	printf("isalpha: %i\n", isalpha(c));
+	printf("isalpha: %i ", isalpha(c));
 	printf("ft_isalpha: %i\n", ft_isalpha(c));
+	printf("isdigit: %i ", isdigit(c));
+	printf("ft_isalpha: %i\n", ft_isdigit(c));
+	printf("isalnum: %i ", isalnum(c));
+	printf("ft_isalnum: %i \n", ft_isalnum(c));
 	return (0);
 } 
