@@ -9,7 +9,7 @@ INCLUDE := $(addsuffix .h,$(INCLUDE))
 OBJECT = $(addsuffix .o,$(FT))
 NAME = libft.a
 
-.PHONY : all clean fclean
+.PHONY : all clean fclean re
 
 all : $(NAME)
 
@@ -20,7 +20,9 @@ $(OBJECT) : $(INCLUDE) include/libft.h
 	$(CC) $(LIBC)
 
 clean :
-	rm $(OBJECT)
+	$(RM) $(OBJECT)
 
 fclean :
-	rm $(NAME) $(OBJECT)
+	$(RM) $(NAME) $(OBJECT)
+
+re : fclean all
