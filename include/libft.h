@@ -7,4 +7,5 @@
 # include "ft_isascii.h"
 # include "ft_isprint.h"
 # include "ft_strlen.h"
+# include "ft_toupper.h"
 #endif
