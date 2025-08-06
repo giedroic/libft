@@ -9,7 +9,7 @@ INCLUDE := $(addsuffix .h,$(INCLUDE))
 OBJECT = $(addsuffix .o,$(FT))
 NAME = libft.a
 
-.PHONY : clean
+.PHONY : all clean
 
 all: $(NAME)
 
