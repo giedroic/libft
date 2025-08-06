@@ -3,4 +3,5 @@
 
 # include "ft_isalpha.h"
 # include "ft_isdigit.h"
+# include "ft_isalnum.h"
 #endif
