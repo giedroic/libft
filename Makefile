@@ -13,3 +13,6 @@ libft.a : $(OBJECT)
 
 $(OBJECT) : $(INCLUDE) include/libft.h
 	$(CC) $(LIBC)
+
+clean :
+	rm libft.a $(OBJECT)
