@@ -1,7 +1,7 @@
 # Makefile for libft library module #
 
 CC = cc -c -Wall -Wextra -Werror
-FT = ft_isalpha ft_isdigit
+FT = ft_isalpha ft_isdigit ft_isalnum
 LIBC = $(addprefix libc/,$(FT))
 LIBC :=$(addsuffix .c,$(LIBC))
 INCLUDE = $(addprefix include/,$(FT))
