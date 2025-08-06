@@ -23,5 +23,8 @@ int	main(int argc, char *argv[])
 	printf("ft_strlen: %lu \n", ft_strlen(argv[1]));*/
 	printf("toupper: %c ", toupper(c));
 	printf("ft_toupper: %c\n", ft_toupper(c));
+	printf("tolower: %c ", tolower(c));
+	printf("ft_tolower: %c\n", ft_tolower(c));
+
 	return (0);
 } 

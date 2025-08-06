@@ -8,4 +8,5 @@
 # include "ft_isprint.h"
 # include "ft_strlen.h"
 # include "ft_toupper.h"
+# include "ft_tolower.h"
 #endif
