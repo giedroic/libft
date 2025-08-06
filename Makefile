@@ -11,6 +11,8 @@ NAME = libft.a
 
 .PHONY : clean
 
+all: $(NAME)
+
 $(NAME) : $(OBJECT)
 	ar cr $(NAME) $(OBJECT)
 
