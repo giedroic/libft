@@ -5,4 +5,5 @@
 # include "ft_isdigit.h"
 # include "ft_isalnum.h"
 # include "ft_isascii.h"
+# include "ft_isprint.h"
 #endif

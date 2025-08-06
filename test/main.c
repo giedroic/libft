@@ -16,5 +16,7 @@ int	main(int argc, char *argv[])
 	printf("ft_isalnum: %i \n", ft_isalnum(c));
 	printf("ft_isascii: %i ", isascii(c));
 	printf("isascii: %i\n", ft_isascii(c));
+	printf("isprint: %i ", isprint(c));
+	printf("ft_isprint: %i\n", ft_isprint(c));
 	return (0);
 } 
