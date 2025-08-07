@@ -10,4 +10,5 @@
 # include "ft_toupper.h"
 # include "ft_tolower.h"
 # include "ft_strchr.h"
+# include "ft_strrchr.h"
 #endif

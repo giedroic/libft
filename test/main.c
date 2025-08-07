@@ -27,6 +27,7 @@ int	main(int argc, char *argv[])
 	printf("ft_tolower: %c\n", ft_tolower(c));*/
 	printf("strchr: %s ", strchr(argv[1], c));
 	printf("ft_strchr: %s\n", ft_strchr(argv[1], c));
-
+	printf("strrchr: %s ", strrchr(argv[1], c));
+	printf("ft_strrchr: %s\n", ft_strrchr(argv[1], c));
 	return (0);
 } 

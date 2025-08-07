@@ -2,7 +2,8 @@
 
 CC = cc -c -Wall -Wextra -Werror
 FT = ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint \
-	ft_strlen ft_toupper ft_tolower ft_strchr
+	ft_strlen ft_toupper ft_tolower ft_strchr ft_strrchr
+	
 LIBC = $(addprefix libc/,$(FT))
 LIBC :=$(addsuffix .c,$(LIBC))
 INCLUDE = $(addprefix include/,$(FT))
