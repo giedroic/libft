@@ -9,4 +9,5 @@
 # include "ft_strlen.h"
 # include "ft_toupper.h"
 # include "ft_tolower.h"
+# include "ft_strchr.h"
 #endif
