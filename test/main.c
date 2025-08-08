@@ -41,12 +41,14 @@ int	main(int argc, char *argv[])
 	free(array);
 	ft_array = ft_calloc(2, sizeof(int));
 	printf("ft_calloc: %i %i\n", ft_array[0], ft_array[1]);
-	free(ft_array);*/
+	free(ft_array);
 	array = strdup(NULL);
 	printf("strdup: %s ", array);
 	free(array);
 	ft_array = ft_strdup(NULL);
 	printf("ft_strdup %s\n", ft_array);	
-	free(ft_array);
+	free(ft_array);*/
+	printf("atoi: %i ", atoi(argv[1]));
+	printf("ft_atoi: %i\n", ft_atoi(argv[1]));
 	return (0);
 } 
