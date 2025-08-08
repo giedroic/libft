@@ -1,6 +1,8 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <stddef.h>
 #include "../include/libft.h"
 
 int	main(int argc, char *argv[])
@@ -24,10 +26,12 @@ int	main(int argc, char *argv[])
 	printf("toupper: %c ", toupper(c));
 	printf("ft_toupper: %c\n", ft_toupper(c));
 	printf("tolower: %c ", tolower(c));
-	printf("ft_tolower: %c\n", ft_tolower(c));*/
+	printf("ft_tolower: %c\n", ft_tolower(c));
 	printf("strchr: %s ", strchr(argv[1], c));
 	printf("ft_strchr: %s\n", ft_strchr(argv[1], c));
 	printf("strrchr: %s ", strrchr(argv[1], c));
-	printf("ft_strrchr: %s\n", ft_strrchr(argv[1], c));
+	printf("ft_strrchr: %s\n", ft_strrchr(argv[1], c));*/
+	printf("strncmp: %i ", strncmp(argv[1], argv[2], atoi(argv[3])));
+	printf("ft_strncmp %i\n", ft_strncmp(argv[1], argv[2], atoi(argv[3])));
 	return (0);
 } 

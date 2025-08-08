@@ -11,4 +11,5 @@
 # include "ft_tolower.h"
 # include "ft_strchr.h"
 # include "ft_strrchr.h"
+# include "ft_strncmp.h"
 #endif
