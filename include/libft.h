@@ -12,4 +12,5 @@
 # include "ft_strchr.h"
 # include "ft_strrchr.h"
 # include "ft_strncmp.h"
+# include "ft_calloc.h"
 #endif
