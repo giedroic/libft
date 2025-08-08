@@ -7,13 +7,14 @@
 
 int	main(int argc, char *argv[])
 {
-	char	c;
-	int	*array;
-	int	*ft_array;
+	char	*array;
+	char	*ft_array;
+	/*int	size;
+	char	c
 	
 	c = argv[2][0];
 	argc = (int) argc;
-	/*printf("isalpha: %i ", isalpha(c));
+	printf("isalpha: %i ", isalpha(c));
 	printf("ft_isalpha: %i\n", ft_isalpha(c));
 	printf("isdigit: %i ", isdigit(c));
 	printf("ft_isalpha: %i\n", ft_isdigit(c));
@@ -34,12 +35,18 @@ int	main(int argc, char *argv[])
 	printf("strrchr: %s ", strrchr(argv[1], c));
 	printf("ft_strrchr: %s\n", ft_strrchr(argv[1], c));
 	printf("strncmp: %i ", strncmp(argv[1], argv[2], atoi(argv[3])));
-	printf("ft_strncmp %i\n", ft_strncmp(argv[1], argv[2], atoi(argv[3])));*/
+	printf("ft_strncmp %i\n", ft_strncmp(argv[1], argv[2], atoi(argv[3])));
 	array = calloc(2, 2 * sizeof(int));
 	printf("calloc: %i %i ", array[0], array[1]); 
 	free(array);
 	ft_array = ft_calloc(2, sizeof(int));
 	printf("ft_calloc: %i %i\n", ft_array[0], ft_array[1]);
+	free(ft_array);*/
+	array = strdup(NULL);
+	printf("strdup: %s ", array);
+	free(array);
+	ft_array = ft_strdup(NULL);
+	printf("ft_strdup %s\n", ft_array);	
 	free(ft_array);
 	return (0);
 } 
