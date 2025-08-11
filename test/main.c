@@ -47,8 +47,11 @@ int	main(int argc, char *argv[])
 	free(array);
 	ft_array = ft_strdup(NULL);
 	printf("ft_strdup %s\n", ft_array);	
-	free(ft_array);*/
+	free(ft_array);
 	printf("atoi: %i ", atoi(argv[1]));
-	printf("ft_atoi: %i\n", ft_atoi(argv[1]));
+	printf("ft_atoi: %i\n", ft_atoi(argv[1]));*/
+	array = strdup(argv[1]);
+	printf("memchr: %s ", (char *) memchr(array, argv[2][0], strlen(array)));
+	printf("ft_memchr: %s\n", (char *) ft_memchr(array, argv[2][0], strlen(array)));
 	return (0);
 } 

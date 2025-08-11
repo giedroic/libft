@@ -15,4 +15,5 @@
 # include "ft_calloc.h"
 # include "ft_strdup.h"
 # include "ft_atoi.h"
+# include "ft_memchr.h"
 #endif
