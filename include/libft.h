@@ -16,4 +16,5 @@
 # include "ft_strdup.h"
 # include "ft_atoi.h"
 # include "ft_memchr.h"
+# include "ft_memcmp.h"
 #endif
