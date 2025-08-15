@@ -53,12 +53,14 @@ int	main(int argc, char *argv[])
 	printf("ft_atoi: %i\n", ft_atoi(argv[1]));
 	array = strdup(argv[1]);
 	printf("memchr: %s ", (char *) memchr(array, argv[2][0], strlen(array)));
-	printf("ft_memchr: %s\n", (char *) ft_memchr(array, argv[2][0], strlen(array)));*/
+	printf("ft_memchr: %s\n", (char *) ft_memchr(array, argv[2][0], strlen(array)));
 	array_1 = ft_strdup(argv[1]);
 	array_2 = ft_strdup(argv[2]);	
 	printf("memcmp: %i ", memcmp(array_1, array_2, ft_atoi(argv[3])));
 	printf("ft_memcmp: %i\n", ft_memcmp(array_1, array_2, ft_atoi(argv[3])));
 	free(array_1);
-	free(array_2);
+	free(array_2);*/
+	printf("strnstr: %s ", strnstr(argv[1], argv[2], atoi(argv[3])));
+	printf("ft_strnstr: %s\n", ft_strnstr(argv[1], argv[2], atoi(argv[3])));
 	return (0);
 } 
