@@ -9,6 +9,7 @@ int	main(int argc, char *argv[])
 {
 	char	*array_1;
 	char	*array_2;
+	char	*array;
 	char	*ft_array;
 	/*int	size;
 	char	c
@@ -59,8 +60,16 @@ int	main(int argc, char *argv[])
 	printf("memcmp: %i ", memcmp(array_1, array_2, ft_atoi(argv[3])));
 	printf("ft_memcmp: %i\n", ft_memcmp(array_1, array_2, ft_atoi(argv[3])));
 	free(array_1);
-	free(array_2);*/
+	free(array_2);
 	printf("strnstr: %s ", strnstr(argv[1], argv[2], atoi(argv[3])));
-	printf("ft_strnstr: %s\n", ft_strnstr(argv[1], argv[2], atoi(argv[3])));
+	printf("ft_strnstr: %s\n", ft_strnstr(argv[1], argv[2], atoi(argv[3])));*/
+	array = malloc(sizeof(char) * ft_atoi(argv[3]));
+	memset(array, argv[1][0], ft_atoi(argv[2]));
+	printf("memset: %s ", array);
+	free(array);
+	ft_array = malloc(sizeof(char) * ft_atoi(argv[3]));
+	ft_memset(ft_array, argv[1][0], ft_atoi(argv[2]));
+	printf("ft_memset: %s\n", ft_array);
+	free(ft_array);
 	return (0);
 } 

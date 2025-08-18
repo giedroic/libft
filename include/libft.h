@@ -18,4 +18,5 @@
 # include "ft_memchr.h"
 # include "ft_memcmp.h"
 # include "ft_strnstr.h"
+# include "ft_memset.h"
 #endif
