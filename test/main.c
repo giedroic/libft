@@ -132,7 +132,7 @@ int	main(int argc, char *argv[])
 	ft_array_2 = ft_strdup(argv[2]);
 	printf("ft_memcpy: %s %s\n", (char *) ft_memcpy(ft_array_1, ft_array_2, ft_atoi(argv[3])), ft_array_1);
 	free(ft_array_1);
-	free(ft_array_2);*/
+	free(ft_array_2);
 
 	array_1 = malloc(sizeof(char) * atoi(argv[1]));
 	array_2 = strdup(argv[2]);
@@ -142,6 +142,19 @@ int	main(int argc, char *argv[])
 	ft_array_1 = malloc(sizeof(char) * ft_atoi(argv[1]));
 	ft_array_2 = ft_strdup(argv[2]);
 	printf("ft_strlcpy: %lu %s\n", ft_strlcpy(ft_array_1, ft_array_2, ft_atoi(argv[3])), ft_array_1);
+	free(ft_array_1);
+	free(ft_array_2);*/
+
+	array_1 = malloc(sizeof(char) * atoi(argv[1]));
+	strcpy(array_1, argv[2]);
+	array_2 = strdup(argv[3]);
+	printf("strlcat: %lu %s ", strlcat(array_1, array_2, atoi(argv[4])), array_1);
+	free(array_1);
+	free(array_2);
+	ft_array_1 = malloc(sizeof(char) * ft_atoi(argv[1]));
+	strcpy(ft_array_1, argv[2]);
+	ft_array_2 = ft_strdup(argv[3]);
+	printf("ft_strlcat: %lu %s\n", ft_strlcat(ft_array_1, ft_array_2, ft_atoi(argv[4])), ft_array_1);
 	free(ft_array_1);
 	free(ft_array_2);
 	return (0);
