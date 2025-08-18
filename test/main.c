@@ -11,6 +11,8 @@ int	main(int argc, char *argv[])
 	char	*array_2;
 	char	*array;
 	char	*ft_array;
+	int		n;
+	int		i;
 	/*int	size;
 	char	c
 	
@@ -62,7 +64,7 @@ int	main(int argc, char *argv[])
 	free(array_1);
 	free(array_2);
 	printf("strnstr: %s ", strnstr(argv[1], argv[2], atoi(argv[3])));
-	printf("ft_strnstr: %s\n", ft_strnstr(argv[1], argv[2], atoi(argv[3])));*/
+	printf("ft_strnstr: %s\n", ft_strnstr(argv[1], argv[2], atoi(argv[3])));
 	array = malloc(sizeof(char) * ft_atoi(argv[3]));
 	memset(array, argv[1][0], ft_atoi(argv[2]));
 	printf("memset: %s ", array);
@@ -70,6 +72,34 @@ int	main(int argc, char *argv[])
 	ft_array = malloc(sizeof(char) * ft_atoi(argv[3]));
 	ft_memset(ft_array, argv[1][0], ft_atoi(argv[2]));
 	printf("ft_memset: %s\n", ft_array);
+	free(ft_array);*/
+	array = strdup(argv[1]);
+	n = strlen(argv[1]);
+	bzero(array, atoi(argv[2]));	
+	ft_array = ft_strdup(argv[1]);
+	ft_bzero(ft_array, ft_atoi(argv[2]));
+	i = 0;
+	printf("bzero: ");
+	while (i < n)
+	{
+		if (array[i] == 0)
+			printf("0");
+		else
+			printf("%c", array[i]);		
+		++i;
+	}
+	i = 0;
+	printf(" ft_bzero: ");	
+	free(array);
+	while (i < n)
+	{
+		if (ft_array[i] == 0)
+			printf("0");
+		else
+			printf("%c", ft_array[i]);		
+		++i;
+	}
+	printf("\n");
 	free(ft_array);
 	return (0);
 } 
