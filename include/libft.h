@@ -21,4 +21,5 @@
 # include "ft_memset.h"
 # include "ft_bzero.h"
 # include "ft_memcpy.h"
+# include "ft_strlcpy.h"
 #endif
