@@ -6,9 +6,11 @@ FT = ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint \
 	ft_strncmp ft_calloc ft_strdup ft_atoi ft_memchr ft_memcmp \
 	ft_strnstr ft_memset ft_bzero ft_memcpy ft_memmove \
 	ft_strlcpy ft_strlcat
-	
+
 LIBC = $(addprefix libc/,$(FT))
-LIBC :=$(addsuffix .c,$(LIBC))
+LIBC := $(addsuffix .c,$(LIBC))
+ADDITIONAL = $(addprefix additional/,$(FT))
+ADDITIONAL := $(addsuffix .c,$(ADDITIONAL))
 INCLUDE = $(addprefix include/,$(FT))
 INCLUDE := $(addsuffix .h,$(INCLUDE))
 OBJECT = $(addsuffix .o,$(FT))
