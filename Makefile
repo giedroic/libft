@@ -4,7 +4,8 @@ CC = cc -c -Wall -Wextra -Werror
 FT = ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint \
 	ft_strlen ft_toupper ft_tolower ft_strchr ft_strrchr \
 	ft_strncmp ft_calloc ft_strdup ft_atoi ft_memchr ft_memcmp \
-	ft_strnstr ft_memset ft_bzero ft_memcpy ft_strlcpy ft_strlcat
+	ft_strnstr ft_memset ft_bzero ft_memcpy ft_memmove \
+	ft_strlcpy ft_strlcat
 	
 LIBC = $(addprefix libc/,$(FT))
 LIBC :=$(addsuffix .c,$(LIBC))
