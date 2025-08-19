@@ -61,10 +61,10 @@ int	main(int argc, char *argv[])
 	printf("ft_calloc: %i %i\n", ft_array[0], ft_array[1]);
 	free(ft_array);
 
-	array = strdup(NULL);
+	array = strdup(argv[1]);
 	printf("strdup: %s ", array);
 	free(array);
-	ft_array = ft_strdup(NULL);
+	ft_array = ft_strdup(argv[1]);
 	printf("ft_strdup %s\n", ft_array);	
 	free(ft_array);
 
