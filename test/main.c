@@ -13,10 +13,11 @@ int	main(int argc, char *argv[])
 	char	*ft_array_2;
 	char	*array;
 	char	*ft_array;
+	char	*substring;
 	int		n;
 	int		i;
-	int	size;
-	char	c;
+	int		size;
+	char		c;
 /*	
 	c = argv[1][0];
 	argc = (int) argc;
@@ -68,11 +69,11 @@ int	main(int argc, char *argv[])
 	printf("ft_strdup %s\n", ft_array);	
 	free(ft_array);
 
-	printf("atoi: %i ", atoi(argv[1]));
+	printf("atoi: %i ", atoi(NULL));
 	printf("ft_atoi: %i\n", ft_atoi(argv[1]));
 
 	array = strdup(argv[1]);
-	printf("memchr: %s ", (char *) memchr(array, argv[2][0], strlen(array)));
+	printf("memchr: %s ", (char *) memchr(NULL, argv[2][0], strlen(array)));
 	printf("ft_memchr: %s\n", (char *) ft_memchr(array, argv[2][0], strlen(array)));
 
 	array_1 = ft_strdup(argv[1]);
@@ -90,7 +91,7 @@ int	main(int argc, char *argv[])
 	printf("memset: %s ", array);
 	free(array);
 	ft_array = malloc(sizeof(char) * ft_atoi(argv[3]));
-	ft_memset(ft_array, argv[1][0], ft_atoi(argv[2]));
+	ft_memset(array, argv[1][0], ft_atoi(argv[2]));
 	printf("ft_memset: %s\n", ft_array);
 	free(ft_array);
 
@@ -147,7 +148,7 @@ int	main(int argc, char *argv[])
 
 	array_1 = malloc(sizeof(char) * atoi(argv[1]));
 	array_2 = strdup(argv[2]);
-	printf("strlcpy: %lu %s ", strlcpy(array_1, array_2, atoi(argv[3])), array_1);
+	printf("strlcpy: %lu %s ", strlcpy(argv[1], argv[2], atoi(argv[3])), array_1);
 	free(array_1);
 	free(array_2);
 	ft_array_1 = malloc(sizeof(char) * ft_atoi(argv[1]));
@@ -167,6 +168,10 @@ int	main(int argc, char *argv[])
 	ft_array_2 = ft_strdup(argv[3]);
 	printf("ft_strlcat: %lu %s\n", ft_strlcat(ft_array_1, ft_array_2, ft_atoi(argv[4])), ft_array_1);
 	free(ft_array_1);
-	free(ft_array_2);*/
+	free(ft_array_2);
+*/
+	substring = ft_substr(argv[1], ft_atoi(argv[2]), ft_atoi(argv[3]));
+	printf("ft_substr: %s\n", substring);
+	free(substring);	
 	return (0);
 } 

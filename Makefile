@@ -1,19 +1,28 @@
 # Makefile for libft library module #
 
 CC = cc -c -Wall -Wextra -Werror
-FT = ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint \
+
+LIBC = ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint \
 	ft_strlen ft_toupper ft_tolower ft_strchr ft_strrchr \
 	ft_strncmp ft_calloc ft_strdup ft_atoi ft_memchr ft_memcmp \
 	ft_strnstr ft_memset ft_bzero ft_memcpy ft_memmove \
 	ft_strlcpy ft_strlcat
 
-LIBC = $(addprefix libc/,$(FT))
-LIBC := $(addsuffix .c,$(LIBC))
-ADDITIONAL = $(addprefix additional/,$(FT))
-ADDITIONAL := $(addsuffix .c,$(ADDITIONAL))
-INCLUDE = $(addprefix include/,$(FT))
+ADDITIONAL = ft_substr
+
+OBJECT = $(LIBC) $(ADDITIONAL)
+OBJECT := $(addsuffix .o,$(OBJECT))
+
+INCLUDE = $(LIBC) $(ADDITIONAL)
+INCLUDE := $(addprefix include/,$(INCLUDE))
 INCLUDE := $(addsuffix .h,$(INCLUDE))
-OBJECT = $(addsuffix .o,$(FT))
+
+LIBC := $(addprefix libc/,$(LIBC))
+LIBC := $(addsuffix .c,$(LIBC))
+
+ADDITIONAL := $(addprefix additional/,$(ADDITIONAL))
+ADDITIONAL := $(addsuffix .c,$(ADDITIONAL))
+
 NAME = libft.a
 
 .PHONY : all clean fclean re
@@ -24,7 +33,7 @@ $(NAME) : $(OBJECT)
 	ar cr $(NAME) $(OBJECT)
 
 $(OBJECT) : $(INCLUDE) include/libft.h
-	$(CC) $(LIBC)
+	$(CC) $(LIBC) $(ADDITIONAL)
 
 clean :
 	$(RM) $(OBJECT)
