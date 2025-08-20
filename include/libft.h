@@ -25,4 +25,5 @@
 # include "ft_strlcpy.h"
 # include "ft_strlcat.h"
 # include "ft_substr.h"	
+# include "ft_strjoin.h"
 #endif

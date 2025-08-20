@@ -169,9 +169,18 @@ int	main(int argc, char *argv[])
 	printf("ft_strlcat: %lu %s\n", ft_strlcat(ft_array_1, ft_array_2, ft_atoi(argv[4])), ft_array_1);
 	free(ft_array_1);
 	free(ft_array_2);
-*/
+
 	substring = ft_substr(argv[1], ft_atoi(argv[2]), ft_atoi(argv[3]));
 	printf("ft_substr: %s\n", substring);
 	free(substring);	
+*/
+	array_1 = ft_strdup(argv[1]);
+	array_2 = ft_strdup(argv[2]);
+	array = ft_strjoin(array_1, array_2);	
+	printf("ft_strjoin: %s\n", array);
+	free(array_1);
+	free(array_2);
+	free(array);
+
 	return (0);
 } 
