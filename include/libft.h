@@ -28,4 +28,5 @@
 # include "ft_strjoin.h"
 # include "ft_strtrim.h"
 # include "ft_split.h"
+# include "ft_itoa.h"
 #endif

@@ -189,7 +189,6 @@ int	main(int argc, char *argv[])
 	free(array_1);
 	free(array_2);
 	free(array);
-*/
 
 	array_of_strings = ft_split(argv[1], argv[2][0]);
 	i = 0;
@@ -199,5 +198,9 @@ int	main(int argc, char *argv[])
 		++i;
 	}
 	free(array_of_strings);
+*/
+	array = ft_itoa(ft_atoi(argv[1]));
+	printf("ft_itoa: %s\n", array);
+
 	return (0);
 } 
