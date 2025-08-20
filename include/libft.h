@@ -27,4 +27,5 @@
 # include "ft_substr.h"	
 # include "ft_strjoin.h"
 # include "ft_strtrim.h"
+# include "ft_split.h"
 #endif

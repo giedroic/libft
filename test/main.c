@@ -14,6 +14,7 @@ int	main(int argc, char *argv[])
 	char	*array;
 	char	*ft_array;
 	char	*substring;
+	char	**array_of_strings;
 	int		n;
 	int		i;
 	int		size;
@@ -180,7 +181,7 @@ int	main(int argc, char *argv[])
 	free(array_1);
 	free(array_2);
 	free(array);
-*/
+
 	array_1 = ft_strdup(argv[1]);
 	array_2 = ft_strdup(argv[2]);
 	array = ft_strtrim(array_1, array_2);
@@ -188,6 +189,15 @@ int	main(int argc, char *argv[])
 	free(array_1);
 	free(array_2);
 	free(array);
+*/
 
+	array_of_strings = ft_split(argv[1], argv[2][0]);
+	i = 0;
+	while (array_of_strings[i] != NULL)
+	{
+		printf("element %i: %s\n", i, array_of_strings[i]);
+		++i;
+	}
+	free(array_of_strings);
 	return (0);
 } 
