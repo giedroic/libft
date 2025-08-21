@@ -31,4 +31,5 @@
 # include "ft_itoa.h"
 # include "ft_strmapi.h"
 # include "ft_striteri.h"
+# include "ft_putchar_fd.h"
 #endif

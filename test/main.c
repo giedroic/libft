@@ -27,7 +27,6 @@ char	decrypt(unsigned int offset, char c)
 		c = offset;
 	return (c);
 }
-*/
 
 void	encrypt_(unsigned int offset, char *c)
 {
@@ -48,6 +47,7 @@ void	decrypt_(unsigned int offset, char *c)
 	if (*c == 0)
 		*c = offset;
 }
+*/
 
 int	main(int argc, char *argv[])
 {
@@ -251,13 +251,14 @@ int	main(int argc, char *argv[])
 	array = ft_strmapi(array, decrypt);
 	printf("ft_strmapi: %s\n", array);	
 	free(array);
-*/
+
 	array = ft_strdup(argv[1]);
 	ft_striteri(array, encrypt_);
 	printf("ft_strmapi: %s ", array);
 	ft_striteri(array, decrypt_);
 	printf("ft_strmapi: %s\n", array);
 	free(array);
-
+*/
+	ft_putchar_fd(argv[1][0], ft_atoi(argv[2]));
 	return (0);
 } 
