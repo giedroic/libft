@@ -12,10 +12,12 @@ ADDITIONAL = ft_substr ft_strjoin ft_strtrim ft_split ft_itoa \
 		ft_strmapi ft_striteri ft_putchar_fd ft_putendl_fd \
 		ft_putnbr_fd
 
-OBJECT = $(LIBC) $(ADDITIONAL)
+BONUS = 
+
+OBJECT = $(LIBC) $(ADDITIONAL) $(BONUS)
 OBJECT := $(addsuffix .o,$(OBJECT))
 
-INCLUDE = $(LIBC) $(ADDITIONAL)
+INCLUDE = $(LIBC) $(ADDITIONAL) $(BONUS)
 INCLUDE := $(addprefix include/,$(INCLUDE))
 INCLUDE := $(addsuffix .h,$(INCLUDE))
 
@@ -24,6 +26,9 @@ LIBC := $(addsuffix .c,$(LIBC))
 
 ADDITIONAL := $(addprefix additional/,$(ADDITIONAL))
 ADDITIONAL := $(addsuffix .c,$(ADDITIONAL))
+
+BONUS := $(addprefix bonus/,$(BONUS))
+BONUS := $(addsuffix .c,$(BONUS))
 
 NAME = libft.a
 
