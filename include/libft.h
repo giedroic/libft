@@ -34,4 +34,10 @@
 # include "ft_putchar_fd.h"
 # include "ft_putendl_fd.h"
 # include "ft_putnbr_fd.h"
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 #endif
