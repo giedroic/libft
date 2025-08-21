@@ -273,7 +273,8 @@ int	main(int argc, char *argv[])
 		printf("ft_lstnew: %s\n", (char *) list->content);	
 		list = list->next;
 	}
-*/
+
+	n = ft_strlen(argv[1]);
 	list = NULL;	
 	new_node = ft_lstnew(argv[1]);
 	ft_lstadd_front(&list, new_node); 
@@ -281,9 +282,24 @@ int	main(int argc, char *argv[])
 	ft_lstadd_front(&list, new_node);
 	while (list != NULL)
 	{
-		printf("ft_lstnew: %s\n", (char *) list->content);	
+		printf("ft_lstnew: %s\n", (char *) list->content);
 		list = list->next;
 	}
+*/
 
+	list = NULL;	
+	i = 2;
+	while (i < atoi(argv[1]) + 2)
+	{
+		new_node = ft_lstnew(argv[i]);
+		ft_lstadd_front(&list, new_node);
+		++i;
+	}
+	printf("ft_lstsize: %i\n", ft_lstsize(list));
+	while (list != NULL)
+	{
+		printf("%s\n", (char *) list->content);
+		list = list->next;
+	}
 	return (0);
 } 

@@ -36,4 +36,5 @@
 # include "t_list.h"
 # include "ft_lstnew.h"
 # include "ft_lstadd_front.h"
+# include "ft_lstsize.h"
 #endif

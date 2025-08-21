@@ -11,12 +11,12 @@ ADDITIONAL = ft_substr ft_strjoin ft_strtrim ft_split ft_itoa \
 		ft_strmapi ft_striteri ft_putchar_fd ft_putendl_fd \
 		ft_putnbr_fd
 
-BONUS = ft_lstnew ft_lstadd_front
+BONUS = ft_lstnew ft_lstadd_front ft_lstsize
 
-OBJECT = $(LIBC) $(ADDITIONAL) $(BONUS)
+OBJECT = $(LIBC) $(ADDITIONAL)
 OBJECT := $(addsuffix .o,$(OBJECT))
 
-INCLUDE = $(LIBC) $(ADDITIONAL) $(BONUS)
+INCLUDE = $(LIBC) $(ADDITIONAL)
 INCLUDE := $(addprefix include/,$(INCLUDE))
 INCLUDE := $(addsuffix .h,$(INCLUDE))
 
@@ -26,6 +26,8 @@ LIBC := $(addsuffix .c,$(LIBC))
 ADDITIONAL := $(addprefix additional/,$(ADDITIONAL))
 ADDITIONAL := $(addsuffix .c,$(ADDITIONAL))
 
+BONUS_OBJECT = $(BONUS)
+BONUS_OBJECT := $(addsuffix .o,$(BONUS_OBJECT))
 BONUS := $(addprefix bonus/,$(BONUS))
 BONUS := $(addsuffix .c,$(BONUS))
 
@@ -45,9 +47,9 @@ clean :
 	$(RM) $(OBJECT)
 
 fclean :
-	$(RM) $(NAME) $(OBJECT)
+	$(RM) $(NAME) $(OBJECT) $(BONUS_OBJECT)
 
 bonus :
-	$(CC) $(BONUS)	
-
+	$(CC) $(BONUS)
+	ar cr $(NAME) $(BONUS_OBJECT)	
 re : fclean bonus all
