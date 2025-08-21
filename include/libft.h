@@ -1,6 +1,5 @@
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stddef.h>
 # include "ft_isalpha.h"
 # include "ft_isdigit.h"
 # include "ft_isalnum.h"
