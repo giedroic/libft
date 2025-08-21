@@ -285,7 +285,6 @@ int	main(int argc, char *argv[])
 		printf("ft_lstnew: %s\n", (char *) list->content);
 		list = list->next;
 	}
-*/
 
 	list = NULL;	
 	i = 2;
@@ -301,5 +300,16 @@ int	main(int argc, char *argv[])
 		printf("%s\n", (char *) list->content);
 		list = list->next;
 	}
+*/
+	list = NULL;	
+	i = 2;
+	while (i < atoi(argv[1]) + 2)
+	{
+		new_node = ft_lstnew(argv[i]);
+		ft_lstadd_front(&list, new_node);
+		++i;
+	}
+	printf("ft_lstlast: %s\n", (char *) ft_lstlast(list)->content);	
+
 	return (0);
 } 

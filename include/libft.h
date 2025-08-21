@@ -37,4 +37,5 @@
 # include "ft_lstnew.h"
 # include "ft_lstadd_front.h"
 # include "ft_lstsize.h"
+# include "ft_lstlast.h"
 #endif
