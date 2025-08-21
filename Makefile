@@ -11,7 +11,7 @@ ADDITIONAL = ft_substr ft_strjoin ft_strtrim ft_split ft_itoa \
 		ft_strmapi ft_striteri ft_putchar_fd ft_putendl_fd \
 		ft_putnbr_fd
 
-BONUS = ft_lstnew
+BONUS = ft_lstnew ft_lstadd_front
 
 OBJECT = $(LIBC) $(ADDITIONAL) $(BONUS)
 OBJECT := $(addsuffix .o,$(OBJECT))

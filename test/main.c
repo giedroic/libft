@@ -60,6 +60,7 @@ int	main(int argc, char *argv[])
 	char	*substring;
 	char	**array_of_strings;
 	t_list	*list;
+	t_list	*new_node;
 	int		n;
 	int		i;
 	int		size;
@@ -265,12 +266,24 @@ int	main(int argc, char *argv[])
 	ft_putendl_fd(argv[1], ft_atoi(argv[2]));
 
 	ft_putnbr_fd(ft_atoi(argv[1]), ft_atoi(argv[2]));
-*/
+
 	list = ft_lstnew(argv[1]);	
 	while (list != NULL)
 	{
 		printf("ft_lstnew: %s\n", (char *) list->content);	
 		list = list->next;
 	}
+*/
+	list = NULL;	
+	new_node = ft_lstnew(argv[1]);
+	ft_lstadd_front(&list, new_node); 
+	new_node = ft_lstnew(argv[2]);
+	ft_lstadd_front(&list, new_node);
+	while (list != NULL)
+	{
+		printf("ft_lstnew: %s\n", (char *) list->content);	
+		list = list->next;
+	}
+
 	return (0);
 } 
