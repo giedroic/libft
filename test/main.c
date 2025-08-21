@@ -59,6 +59,7 @@ int	main(int argc, char *argv[])
 	char	*ft_array;
 	char	*substring;
 	char	**array_of_strings;
+	t_list	*list;
 	int		n;
 	int		i;
 	int		size;
@@ -262,7 +263,14 @@ int	main(int argc, char *argv[])
 	ft_putchar_fd(argv[1][0], ft_atoi(argv[2]));
 
 	ft_putendl_fd(argv[1], ft_atoi(argv[2]));
-*/
+
 	ft_putnbr_fd(ft_atoi(argv[1]), ft_atoi(argv[2]));
+*/
+	list = ft_lstnew(argv[1]);	
+	while (list != NULL)
+	{
+		printf("ft_lstnew: %s\n", (char *) list->content);	
+		list = list->next;
+	}
 	return (0);
 } 

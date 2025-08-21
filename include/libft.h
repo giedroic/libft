@@ -1,5 +1,12 @@
 #ifndef LIBFT_H
 # define LIBFT_H
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
 # include "ft_isalpha.h"
 # include "ft_isdigit.h"
 # include "ft_isalnum.h"
@@ -33,10 +40,6 @@
 # include "ft_putchar_fd.h"
 # include "ft_putendl_fd.h"
 # include "ft_putnbr_fd.h"
+# include "ft_lstnew.h"
 
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
 #endif

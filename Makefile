@@ -11,7 +11,7 @@ ADDITIONAL = ft_substr ft_strjoin ft_strtrim ft_split ft_itoa \
 		ft_strmapi ft_striteri ft_putchar_fd ft_putendl_fd \
 		ft_putnbr_fd
 
-BONUS = 
+BONUS = ft_lstnew
 
 OBJECT = $(LIBC) $(ADDITIONAL) $(BONUS)
 OBJECT := $(addsuffix .o,$(OBJECT))
@@ -31,7 +31,7 @@ BONUS := $(addsuffix .c,$(BONUS))
 
 NAME = libft.a
 
-.PHONY : all clean fclean re
+.PHONY : all clean fclean re bonus
 
 all : $(NAME)
 
@@ -50,4 +50,4 @@ fclean :
 bonus :
 	$(CC) $(BONUS)	
 
-re : fclean all
+re : fclean bonus all
