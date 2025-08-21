@@ -5,6 +5,7 @@
 #include <stddef.h>
 #include "../include/libft.h"
 
+/*
 char	encrypt(unsigned int offset, char c)
 {
 	if (c == 0)
@@ -25,6 +26,27 @@ char	decrypt(unsigned int offset, char c)
 	if (c == 0)
 		c = offset;
 	return (c);
+}
+*/
+
+void	encrypt_(unsigned int offset, char *c)
+{
+	if (*c == 0)
+		return ;
+	offset = offset % 255 + 1;
+	*c += offset;
+	if (*c == 0)
+		*c = offset;
+}
+
+void	decrypt_(unsigned int offset, char *c)
+{
+	if (*c == 0)
+		return ;
+	offset = offset % 255 + 1;
+	*c -= offset;
+	if (*c == 0)
+		*c = offset;
 }
 
 int	main(int argc, char *argv[])
@@ -223,11 +245,19 @@ int	main(int argc, char *argv[])
 
 	array = ft_itoa(ft_atoi(argv[1]));
 	printf("ft_itoa: %s\n", array);
-*/
+
 	array = ft_strmapi(argv[1], encrypt);
 	printf("ft_strmapi: %s ", array);
 	array = ft_strmapi(array, decrypt);
 	printf("ft_strmapi: %s\n", array);	
 	free(array);
+*/
+	array = ft_strdup(argv[1]);
+	ft_striteri(array, encrypt_);
+	printf("ft_strmapi: %s ", array);
+	ft_striteri(array, decrypt_);
+	printf("ft_strmapi: %s\n", array);
+	free(array);
+
 	return (0);
 } 

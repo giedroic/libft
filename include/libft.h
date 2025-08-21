@@ -30,4 +30,5 @@
 # include "ft_split.h"
 # include "ft_itoa.h"
 # include "ft_strmapi.h"
+# include "ft_striteri.h"
 #endif
