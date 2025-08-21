@@ -260,7 +260,9 @@ int	main(int argc, char *argv[])
 	free(array);
 
 	ft_putchar_fd(argv[1][0], ft_atoi(argv[2]));
-*/
+
 	ft_putendl_fd(argv[1], ft_atoi(argv[2]));
+*/
+	ft_putnbr_fd(ft_atoi(argv[1]), ft_atoi(argv[2]));
 	return (0);
 } 

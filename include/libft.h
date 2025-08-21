@@ -33,4 +33,5 @@
 # include "ft_striteri.h"
 # include "ft_putchar_fd.h"
 # include "ft_putendl_fd.h"
+# include "ft_putnbr_fd.h"
 #endif
