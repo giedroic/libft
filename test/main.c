@@ -258,7 +258,9 @@ int	main(int argc, char *argv[])
 	ft_striteri(array, decrypt_);
 	printf("ft_strmapi: %s\n", array);
 	free(array);
-*/
+
 	ft_putchar_fd(argv[1][0], ft_atoi(argv[2]));
+*/
+	ft_putendl_fd(argv[1], ft_atoi(argv[2]));
 	return (0);
 } 
