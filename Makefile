@@ -46,7 +46,7 @@ $(OBJECT) : $(INCLUDE) include/libft.h
 	$(CC) $(LIBC) $(ADDITIONAL)
 
 clean :
-	$(RM) $(OBJECT)
+	$(RM) $(OBJECT) $(BONUS_OBJECT)
 
 fclean :
 	$(RM) $(NAME) $(OBJECT) $(BONUS_OBJECT)
