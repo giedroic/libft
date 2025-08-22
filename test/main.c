@@ -59,7 +59,8 @@ int	main(int argc, char *argv[])
 	char	*ft_array;
 	char	*substring;
 	char	**array_of_strings;
-	t_list	*list;
+	t_list	*list;	
+	t_list	*head;
 	t_list	*new_node;
 	int		n;
 	int		i;
@@ -324,7 +325,7 @@ int	main(int argc, char *argv[])
 		printf("%s\n", (char *) list->content);
 		list = list->next;
 	}	
-*/
+
 	list = NULL;	
 	i = 2;
 	while (i < atoi(argv[1]) + 2)
@@ -339,5 +340,23 @@ int	main(int argc, char *argv[])
 		printf("%s\n", (char *) list->content);
 		list = list->next;
 	}	
+*/
+	list = NULL;	
+	i = 2;
+	while (i < atoi(argv[1]) + 2)
+	{
+		new_node = ft_lstnew(ft_strdup(argv[i]));
+		ft_lstadd_back(&list, new_node);
+		++i;
+	}
+	head = list;
+	list = list->next->next;
+	ft_lstclear(&list, free);
+	while (head != NULL)
+	{
+		printf("%s\n", (char *) head->content);
+		head = head->next;
+	}	
+
 	return (0);
 } 
