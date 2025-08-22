@@ -5,6 +5,14 @@
 #include <stddef.h>
 #include "../include/libft.h"
 
+void	ft_up(void *s)
+{
+	while (*((char *) s) != '\0')
+	{
+		*((char *) s) = ft_toupper(*((char *) s));
+		++s;
+	}
+}
 /*
 char	encrypt(unsigned int offset, char c)
 {
@@ -340,7 +348,7 @@ int	main(int argc, char *argv[])
 		printf("%s\n", (char *) list->content);
 		list = list->next;
 	}	
-*/
+
 	list = NULL;	
 	i = 2;
 	while (i < atoi(argv[1]) + 2)
@@ -350,5 +358,22 @@ int	main(int argc, char *argv[])
 		++i;
 	}
 	ft_lstclear(&list, free);
+*/
+	list = NULL;	
+	i = 2;
+	while (i < atoi(argv[1]) + 2)
+	{
+		new_node = ft_lstnew(ft_strdup(argv[i]));
+		ft_lstadd_back(&list, new_node);
+		++i;
+	}
+	ft_lstiter(list, ft_up);
+	head = list;
+	while (list != NULL)
+	{
+		printf("%s\n", (char *) list->content);
+		list = list->next;
+	}
+	ft_lstclear(&head, free);
 	return (0);
 } 
