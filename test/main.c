@@ -349,14 +349,6 @@ int	main(int argc, char *argv[])
 		ft_lstadd_back(&list, new_node);
 		++i;
 	}
-	head = list;
-	list = list->next->next;
 	ft_lstclear(&list, free);
-	while (head != NULL)
-	{
-		printf("%s\n", (char *) head->content);
-		head = head->next;
-	}	
-
 	return (0);
 } 
