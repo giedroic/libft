@@ -5,6 +5,19 @@
 #include <stddef.h>
 #include "../include/libft.h"
 
+void	*ft_up_(void *s)
+{
+	int	i;
+
+	i = 0;
+	while (*((char *) s + i) != '\0')
+	{
+		*((char *) s + i) = ft_toupper(*((char *) s + i));
+		++i;
+	}
+	return (s);
+}
+/*
 void	ft_up(void *s)
 {
 	while (*((char *) s) != '\0')
@@ -13,7 +26,7 @@ void	ft_up(void *s)
 		++s;
 	}
 }
-/*
+
 char	encrypt(unsigned int offset, char c)
 {
 	if (c == 0)
@@ -68,6 +81,7 @@ int	main(int argc, char *argv[])
 	char	*substring;
 	char	**array_of_strings;
 	t_list	*list;	
+	t_list	*list_new;
 	t_list	*head;
 	t_list	*new_node;
 	int		n;
@@ -358,7 +372,7 @@ int	main(int argc, char *argv[])
 		++i;
 	}
 	ft_lstclear(&list, free);
-*/
+
 	list = NULL;	
 	i = 2;
 	while (i < atoi(argv[1]) + 2)
@@ -375,5 +389,21 @@ int	main(int argc, char *argv[])
 		list = list->next;
 	}
 	ft_lstclear(&head, free);
+*/
+	list = NULL;	
+	i = 2;
+	while (i < ft_atoi(argv[1]) + 2)
+	{
+		ft_lstadd_back(&list, ft_lstnew(ft_strdup(argv[i])));
+		++i;
+	}
+	list = ft_lstmap(list, ft_up_, free);
+	head = list;
+	while (list != NULL)
+	{
+		printf("%s\n", (char *) list->content);
+		list = list->next;
+	}
+	ft_lstclear(&head, free);	
 	return (0);
 } 

@@ -42,4 +42,5 @@
 # include "ft_lstdelone.h"
 # include "ft_lstclear.h"
 # include "ft_lstiter.h"
+# include "ft_lstmap.h"
 #endif
