@@ -12,7 +12,7 @@ ADDITIONAL = ft_substr ft_strjoin ft_strtrim ft_split ft_itoa \
 		ft_putnbr_fd
 
 BONUS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast \
-	ft_lstadd_back
+	ft_lstadd_back ft_lstdelone
 OBJECT = $(LIBC) $(ADDITIONAL)
 OBJECT := $(addsuffix .o,$(OBJECT))
 

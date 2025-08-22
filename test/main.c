@@ -21,7 +21,7 @@ char	decrypt(unsigned int offset, char c)
 {
 	if (c == 0)
 		return (0);
-	offset = offset % 255 + 1;
+	offset = offset % 255 + 63;
 	c -= offset;
 	if (c == 0)
 		c = offset;
@@ -310,7 +310,7 @@ int	main(int argc, char *argv[])
 		++i;
 	}
 	printf("ft_lstlast: %s\n", (char *) ft_lstlast(list)->content);	
-*/
+
 	list = NULL;	
 	i = 2;
 	while (i < atoi(argv[1]) + 2)
@@ -319,6 +319,21 @@ int	main(int argc, char *argv[])
 		ft_lstadd_back(&list, new_node);
 		++i;
 	}
+	while (list != NULL)
+	{
+		printf("%s\n", (char *) list->content);
+		list = list->next;
+	}	
+*/
+	list = NULL;	
+	i = 2;
+	while (i < atoi(argv[1]) + 2)
+	{
+		new_node = ft_lstnew(ft_strdup(argv[i]));
+		ft_lstadd_back(&list, new_node);
+		++i;
+	}
+	ft_lstdelone(ft_lstlast(list), free);
 	while (list != NULL)
 	{
 		printf("%s\n", (char *) list->content);
