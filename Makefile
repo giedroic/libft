@@ -42,7 +42,7 @@ all : $(NAME)
 $(NAME) : $(OBJECT)
 	ar cr $(NAME) $(OBJECT)
 
-$(OBJECT) : $(INCLUDE) include/libft.h
+$(OBJECT) : $(LIBC) $(ADDITIONAL) $(INCLUDE) include/libft.h
 	$(CC) $(LIBC) $(ADDITIONAL)
 
 clean :
