@@ -17,7 +17,7 @@ BONUS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast \
 
 FT_PRINTF = ft_printf ft_printf_utils
 
-GET_NEXT_LINE = get_next_line
+GET_NEXT_LINE = get_next_line get_next_line_utils
 
 OBJECT = $(LIBC) $(ADDITIONAL) $(BONUS) $(FT_PRINTF) $(GET_NEXT_LINE)
 OBJECT := $(addsuffix .o,$(OBJECT))
