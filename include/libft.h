@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42warsaw.pl>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 14:52:28 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/09/01 13:41:16 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/09/01 13:56:08 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,5 @@
 # include "ft_lstclear.h"
 # include "ft_lstiter.h"
 # include "ft_lstmap.h"
+# include "ft_printf.h"
 #endif

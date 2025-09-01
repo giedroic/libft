@@ -15,7 +15,9 @@ BONUS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast \
 	ft_lstadd_back ft_lstdelone ft_lstclear \
 	ft_lstiter ft_lstmap
 
-OBJECT = $(LIBC) $(ADDITIONAL) $(BONUS)
+FT_PRINTF = ft_printf ft_printf_utils
+
+OBJECT = $(LIBC) $(ADDITIONAL) $(BONUS) $(FT_PRINTF)
 OBJECT := $(addsuffix .o,$(OBJECT))
 
 INCLUDE = $(LIBC) $(ADDITIONAL)
@@ -33,6 +35,9 @@ BONUS_OBJECT := $(addsuffix .o,$(BONUS_OBJECT))
 BONUS := $(addprefix bonus/,$(BONUS))
 BONUS := $(addsuffix .c,$(BONUS))
 
+FT_PRINTF := $(addprefix ft_printf/,$(FT_PRINTF))
+FT_PRINTF := $(addsuffix .c,$(FT_PRINTF))
+
 NAME = libft.a
 
 .PHONY : all clean fclean re bonus
@@ -43,7 +48,7 @@ $(NAME) : $(OBJECT)
 	ar cr $(NAME) $(OBJECT)
 
 $(OBJECT) : $(LIBC) $(ADDITIONAL) $(INCLUDE) include/libft.h
-	$(CC) $(LIBC) $(ADDITIONAL) $(BONUS)
+	$(CC) $(LIBC) $(ADDITIONAL) $(BONUS) $(FT_PRINTF)
 
 clean :
 	$(RM) $(OBJECT) $(BONUS_OBJECT)
