@@ -17,7 +17,9 @@ BONUS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast \
 
 FT_PRINTF = ft_printf ft_printf_utils
 
-OBJECT = $(LIBC) $(ADDITIONAL) $(BONUS) $(FT_PRINTF)
+GET_NEXT_LINE = get_next_line
+
+OBJECT = $(LIBC) $(ADDITIONAL) $(BONUS) $(FT_PRINTF) $(GET_NEXT_LINE)
 OBJECT := $(addsuffix .o,$(OBJECT))
 
 INCLUDE = $(LIBC) $(ADDITIONAL)
@@ -38,6 +40,9 @@ BONUS := $(addsuffix .c,$(BONUS))
 FT_PRINTF := $(addprefix ft_printf/,$(FT_PRINTF))
 FT_PRINTF := $(addsuffix .c,$(FT_PRINTF))
 
+GET_NEXT_LINE := $(addprefix get_next_line/,$(GET_NEXT_LINE))
+GET_NEXT_LINE := $(addsuffix .c,$(GET_NEXT_LINE))
+
 NAME = libft.a
 
 .PHONY : all clean fclean re bonus
@@ -48,7 +53,7 @@ $(NAME) : $(OBJECT)
 	ar cr $(NAME) $(OBJECT)
 
 $(OBJECT) : $(LIBC) $(ADDITIONAL) $(INCLUDE) include/libft.h
-	$(CC) $(LIBC) $(ADDITIONAL) $(BONUS) $(FT_PRINTF)
+	$(CC) $(LIBC) $(ADDITIONAL) $(BONUS) $(FT_PRINTF) $(GET_NEXT_LINE)
 
 clean :
 	$(RM) $(OBJECT) $(BONUS_OBJECT)
