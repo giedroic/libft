@@ -2,6 +2,8 @@
 
 CFLAGS = -Wall -Wextra -Werror -I include
 
+ARFLAGS = rcs
+
 LIBC = ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint \
 	ft_strlen ft_toupper ft_tolower ft_strchr ft_strrchr \
 	ft_strncmp ft_calloc ft_strdup ft_atoi ft_memchr ft_memcmp \
@@ -35,7 +37,7 @@ NAME = libft.a
 all : $(NAME)
 
 $(NAME) : $(OBJECT)
-	$(AR) cr $(NAME) $(OBJECT)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJECT)
 
 obj/%.o : src/%.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@
