@@ -35,7 +35,7 @@ NAME = libft.a
 all : $(NAME)
 
 $(NAME) : $(OBJECT)
-	ar cr $(NAME) $(OBJECT)
+	$(AR) cr $(NAME) $(OBJECT)
 
 obj/%.o : src/%.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@
