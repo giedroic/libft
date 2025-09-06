@@ -41,9 +41,9 @@ obj/%.o : src/%.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
-	$(RM) $(OBJECT) $(BONUS_OBJECT)
+	$(RM) $(OBJECT)
 
 fclean :
-	$(RM) $(NAME) $(OBJECT) $(BONUS_OBJECT)
+	$(RM) $(NAME) $(OBJECT)
 
 re : fclean all
