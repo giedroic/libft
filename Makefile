@@ -42,8 +42,4 @@ clean :
 fclean :
 	$(RM) $(NAME) $(OBJECT) $(BONUS_OBJECT)
 
-bonus :
-	$(CC) $(BONUS)
-	ar cr $(NAME) $(BONUS_OBJECT)	
-
 re : fclean all
