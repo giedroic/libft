@@ -30,7 +30,7 @@ INCLUDE := $(addsuffix .h,$(INCLUDE))
 
 NAME = libft.a
 
-.PHONY : all clean fclean re bonus
+.PHONY : all clean fclean re
 
 all : $(NAME)
 
