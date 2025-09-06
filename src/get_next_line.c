@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 23:53:28 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/09/01 18:35:09 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/09/06 19:05:41 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 static char	*update_stash(char *stash);
 static char	*extract_line(char *stash);
 static char	*read_line(char *stash, int fd);
-
 
 char	*get_next_line(int fd)
 {
@@ -84,4 +83,29 @@ static char	*extract_line(char *stash)
 	return (line);
 }
 
-static char	*read_line(char *stash, int fd)
+char	*read_line(char *stash, int fd)
+{
+	char	*buffer;
+	int		bytes_read;
+
+	if (!stash)
+		stash = ft_calloc(1);
+	buffer = ft_calloc(BUFFER_SIZE + 1);
+	bytes_read = 1;
+	while (bytes_read > 0)
+	{
+		bytes_read = read(fd, buffer, BUFFER_SIZE);
+		if (bytes_read == -1)
+		{
+			free (buffer);
+			free (stash);
+			return (NULL);
+		}
+		*(buffer + bytes_read) = '\0';
+		stash = ft_strjoin(stash, buffer);
+		if (ft_strchr(buffer, '\n'))
+			break ;
+	}
+	free(buffer);
+	return (stash);
+}
