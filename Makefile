@@ -48,7 +48,7 @@ all : $(NAME)
 $(NAME) : $(OBJECT)
 	ar cr $(NAME) $(OBJECT)
 
-%.o : src/%.c include/%.h include/libft.h
+%.o : src/%.c
 	$(CC) $<
 
 clean :
