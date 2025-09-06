@@ -24,18 +24,6 @@ OBJECT = $(LIBC) $(ADDITIONAL) $(BONUS) $(FT_PRINTF) $(GET_NEXT_LINE)
 OBJECT := $(addprefix obj/,$(OBJECT))
 OBJECT := $(addsuffix .o,$(OBJECT))
 
-LIBC := $(addprefix libc/,$(LIBC))
-
-ADDITIONAL := $(addprefix additional/,$(ADDITIONAL))
-
-BONUS_OBJECT = $(BONUS)
-BONUS_OBJECT := $(addsuffix .o,$(BONUS_OBJECT))
-BONUS := $(addprefix bonus/,$(BONUS))
-
-FT_PRINTF := $(addprefix ft_printf/,$(FT_PRINTF))
-
-GET_NEXT_LINE := $(addprefix get_next_line/,$(GET_NEXT_LINE))
-
 NAME = libft.a
 
 .PHONY : all clean fclean re bonus
