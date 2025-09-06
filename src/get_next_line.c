@@ -6,7 +6,7 @@
 /*   By: agiedroi <agiedroi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 23:53:28 by agiedroi          #+#    #+#             */
-/*   Updated: 2025/09/06 19:05:41 by agiedroi         ###   ########.fr       */
+/*   Updated: 2025/09/06 19:06:59 by agiedroi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,8 +89,8 @@ char	*read_line(char *stash, int fd)
 	int		bytes_read;
 
 	if (!stash)
-		stash = ft_calloc(1);
-	buffer = ft_calloc(BUFFER_SIZE + 1);
+		stash = ft_calloc(1, sizeof(char));
+	buffer = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
 	bytes_read = 1;
 	while (bytes_read > 0)
 	{
