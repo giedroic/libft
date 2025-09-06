@@ -27,21 +27,16 @@ INCLUDE := $(addprefix include/,$(INCLUDE))
 INCLUDE := $(addsuffix .h,$(INCLUDE))
 
 LIBC := $(addprefix libc/,$(LIBC))
-LIBC := $(addsuffix .c,$(LIBC))
 
 ADDITIONAL := $(addprefix additional/,$(ADDITIONAL))
-ADDITIONAL := $(addsuffix .c,$(ADDITIONAL))
 
 BONUS_OBJECT = $(BONUS)
 BONUS_OBJECT := $(addsuffix .o,$(BONUS_OBJECT))
 BONUS := $(addprefix bonus/,$(BONUS))
-BONUS := $(addsuffix .c,$(BONUS))
 
 FT_PRINTF := $(addprefix ft_printf/,$(FT_PRINTF))
-FT_PRINTF := $(addsuffix .c,$(FT_PRINTF))
 
 GET_NEXT_LINE := $(addprefix get_next_line/,$(GET_NEXT_LINE))
-GET_NEXT_LINE := $(addsuffix .c,$(GET_NEXT_LINE))
 
 NAME = libft.a
 
