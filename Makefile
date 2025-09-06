@@ -18,9 +18,10 @@ BONUS = ft_lstnew ft_lstadd_front ft_lstsize ft_lstlast \
 
 FT_PRINTF = ft_printf ft_printf_utils
 
-GET_NEXT_LINE = get_next_line get_next_line_utils
+GET_NEXT_LINE = get_next_line
 
 OBJECT = $(LIBC) $(ADDITIONAL) $(BONUS) $(FT_PRINTF) $(GET_NEXT_LINE)
+OBJECT := $(addprefix obj/,$(OBJECT))
 OBJECT := $(addsuffix .o,$(OBJECT))
 
 INCLUDE = $(LIBC) $(ADDITIONAL)
@@ -48,8 +49,8 @@ all : $(NAME)
 $(NAME) : $(OBJECT)
 	ar cr $(NAME) $(OBJECT)
 
-%.o : src/%.c
-	$(CC) $<
+obj/%.o : src/%.c
+	$(CC) $< -o $@
 
 clean :
 	$(RM) $(OBJECT) $(BONUS_OBJECT)
