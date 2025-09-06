@@ -1,6 +1,7 @@
 # Makefile for libft library module #
 
 CC = cc -c -Wall -Wextra -Werror -I include
+
 LIBC = ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint \
 	ft_strlen ft_toupper ft_tolower ft_strchr ft_strrchr \
 	ft_strncmp ft_calloc ft_strdup ft_atoi ft_memchr ft_memcmp \
@@ -59,4 +60,5 @@ fclean :
 bonus :
 	$(CC) $(BONUS)
 	ar cr $(NAME) $(BONUS_OBJECT)	
+
 re : fclean all
