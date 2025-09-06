@@ -24,6 +24,10 @@ OBJECT = $(LIBC) $(ADDITIONAL) $(BONUS) $(FT_PRINTF) $(GET_NEXT_LINE)
 OBJECT := $(addprefix obj/,$(OBJECT))
 OBJECT := $(addsuffix .o,$(OBJECT))
 
+INCLUDE = $(LIBC) $(ADDITIONAL) $(BONUS) ft_printf get_next_line libft
+INCLUDE := $(addprefix include/,$(INCLUDE))
+INCLUDE := $(addsuffix .h,$(INCLUDE))
+
 NAME = libft.a
 
 .PHONY : all clean fclean re bonus
@@ -33,7 +37,7 @@ all : $(NAME)
 $(NAME) : $(OBJECT)
 	ar cr $(NAME) $(OBJECT)
 
-obj/%.o : src/%.c
+obj/%.o : src/%.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
