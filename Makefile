@@ -47,8 +47,8 @@ all : $(NAME)
 $(NAME) : $(OBJECT)
 	ar cr $(NAME) $(OBJECT)
 
-$(OBJECT) : $(LIBC) $(ADDITIONAL) $(INCLUDE) include/libft.h
-	$(CC) $(LIBC) $(ADDITIONAL) $(BONUS) $(FT_PRINTF) $(GET_NEXT_LINE)
+%.o : src/%.c include/%.h include/libft.h
+	$(CC) $<
 
 clean :
 	$(RM) $(OBJECT) $(BONUS_OBJECT)
