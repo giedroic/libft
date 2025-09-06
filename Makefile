@@ -1,6 +1,6 @@
 # Makefile for libft library module #
 
-CC = cc -c -Wall -Wextra -Werror -I include
+CFLAGS = -Wall -Wextra -Werror -I include
 
 LIBC = ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint \
 	ft_strlen ft_toupper ft_tolower ft_strchr ft_strrchr \
@@ -34,7 +34,7 @@ $(NAME) : $(OBJECT)
 	ar cr $(NAME) $(OBJECT)
 
 obj/%.o : src/%.c
-	$(CC) $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
 	$(RM) $(OBJECT) $(BONUS_OBJECT)
