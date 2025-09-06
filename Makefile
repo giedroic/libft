@@ -24,10 +24,6 @@ OBJECT = $(LIBC) $(ADDITIONAL) $(BONUS) $(FT_PRINTF) $(GET_NEXT_LINE)
 OBJECT := $(addprefix obj/,$(OBJECT))
 OBJECT := $(addsuffix .o,$(OBJECT))
 
-INCLUDE = $(LIBC) $(ADDITIONAL)
-INCLUDE := $(addprefix include/,$(INCLUDE))
-INCLUDE := $(addsuffix .h,$(INCLUDE))
-
 LIBC := $(addprefix libc/,$(LIBC))
 
 ADDITIONAL := $(addprefix additional/,$(ADDITIONAL))
