@@ -4,6 +4,8 @@ CFLAGS = -Wall -Wextra -Werror -I include
 
 ARFLAGS = rcs
 
+MKDIR = mkdir -p
+
 RMDIR = rm -rf
 
 LIBC = ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint \
@@ -47,7 +49,7 @@ obj/%.o : src/%.c $(INCLUDE)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR) :
-	mkdir -p $@
+	$(MKDIR) $@
 
 clean :
 	$(RM) $(OBJECT)
