@@ -4,6 +4,8 @@ CFLAGS = -Wall -Wextra -Werror -I include
 
 ARFLAGS = rcs
 
+RMDIR = rm -rf
+
 LIBC = ft_isalpha ft_isdigit ft_isalnum ft_isascii ft_isprint \
 	ft_strlen ft_toupper ft_tolower ft_strchr ft_strrchr \
 	ft_strncmp ft_calloc ft_strdup ft_atoi ft_memchr ft_memcmp \
@@ -49,8 +51,10 @@ $(OBJ_DIR) :
 
 clean :
 	$(RM) $(OBJECT)
+	$(RMDIR) $(OBJ_DIR)
 
 fclean :
 	$(RM) $(NAME) $(OBJECT)
+	$(RMDIR) $(OBJ_DIR)
 
 re : fclean all
